@@ -1,0 +1,482 @@
+[
+    {
+        "title": "The Silent Forest",
+        "author": "Clara Mitchell",
+        "genre": "Mystery",
+        "is_available": true
+    },
+    {
+        "title": "Whispers in the Fog",
+        "author": "Clara Mitchell",
+        "genre": "Mystery",
+        "is_available": false
+    },
+    {
+        "title": "The Crimson Key",
+        "author": "Clara Mitchell",
+        "genre": "Thriller",
+        "is_available": true
+    },
+    {
+        "title": "Echoes of Tomorrow",
+        "author": "Daniel Reeves",
+        "genre": "Science Fiction",
+        "is_available": true
+    },
+    {
+        "title": "The Infinite Code",
+        "author": "Daniel Reeves",
+        "genre": "Cyberpunk",
+        "is_available": false
+    },
+    {
+        "title": "Stars Beyond Reach",
+        "author": "Daniel Reeves",
+        "genre": "Science Fiction",
+        "is_available": true
+    },
+    {
+        "title": "Winds of Autumn",
+        "author": "Harper Lane",
+        "genre": "Romance",
+        "is_available": true
+    },
+    {
+        "title": "Seasons of You",
+        "author": "Harper Lane",
+        "genre": "Romance",
+        "is_available": false
+    },
+    {
+        "title": "The Last Kingdom",
+        "author": "Arthur Benson",
+        "genre": "Historical Fiction",
+        "is_available": true
+    },
+    {
+        "title": "Sword of Destiny",
+        "author": "Arthur Benson",
+        "genre": "Historical Fiction",
+        "is_available": false
+    },
+    {
+        "title": "Journey to the Deep",
+        "author": "Michael Torres",
+        "genre": "Adventure",
+        "is_available": true
+    },
+    {
+        "title": "The Ocean Divide",
+        "author": "Michael Torres",
+        "genre": "Adventure",
+        "is_available": true
+    },
+    {
+        "title": "Fragments of Light",
+        "author": "Emily Carter",
+        "genre": "Drama",
+        "is_available": true
+    },
+    {
+        "title": "The Last Performance",
+        "author": "Emily Carter",
+        "genre": "Drama",
+        "is_available": false
+    },
+    {
+        "title": "Broken Mirrors",
+        "author": "Emily Carter",
+        "genre": "Drama",
+        "is_available": true
+    },
+    {
+        "title": "The Hidden Code",
+        "author": "Robert Kim",
+        "genre": "Cyberpunk",
+        "is_available": false
+    },
+    {
+        "title": "Digital Shadows",
+        "author": "Robert Kim",
+        "genre": "Cyberpunk",
+        "is_available": true
+    },
+    {
+        "title": "Under the Crimson Sky",
+        "author": "Lena Rossi",
+        "genre": "Fantasy",
+        "is_available": true
+    },
+    {
+        "title": "The Moonlight Pact",
+        "author": "Lena Rossi",
+        "genre": "Fantasy",
+        "is_available": false
+    },
+    {
+        "title": "River of Secrets",
+        "author": "Ava Thompson",
+        "genre": "Mystery",
+        "is_available": true
+    },
+    {
+        "title": "The Forgotten Letter",
+        "author": "Ava Thompson",
+        "genre": "Mystery",
+        "is_available": false
+    },
+    {
+        "title": "Empire of Dust",
+        "author": "Julian Cross",
+        "genre": "Historical Fiction",
+        "is_available": true
+    },
+    {
+        "title": "The Iron Throne",
+        "author": "Julian Cross",
+        "genre": "Historical Fiction",
+        "is_available": true
+    },
+    {
+        "title": "Eyes in the Dark",
+        "author": "Fiona Lee",
+        "genre": "Thriller",
+        "is_available": false
+    },
+    {
+        "title": "Nightfall Alley",
+        "author": "Fiona Lee",
+        "genre": "Thriller",
+        "is_available": true
+    },
+    {
+        "title": "Lost Horizon",
+        "author": "Oliver West",
+        "genre": "Adventure",
+        "is_available": true
+    },
+    {
+        "title": "Trail of Smoke",
+        "author": "Oliver West",
+        "genre": "Adventure",
+        "is_available": false
+    },
+    {
+        "title": "Burning Truth",
+        "author": "Hannah Scott",
+        "genre": "Drama",
+        "is_available": true
+    },
+    {
+        "title": "Echoes of Desire",
+        "author": "Hannah Scott",
+        "genre": "Romance",
+        "is_available": true
+    },
+    {
+        "title": "Neon Dreams",
+        "author": "Derek Yu",
+        "genre": "Cyberpunk",
+        "is_available": false
+    },
+    {
+        "title": "Synthetic Souls",
+        "author": "Derek Yu",
+        "genre": "Science Fiction",
+        "is_available": true
+    },
+    {
+        "title": "Kingdom of Glass",
+        "author": "Elena Ward",
+        "genre": "Fantasy",
+        "is_available": true
+    },
+    {
+        "title": "Crown of Ashes",
+        "author": "Elena Ward",
+        "genre": "Fantasy",
+        "is_available": false
+    },
+    {
+        "title": "Echo Lake",
+        "author": "Madeline Cooper",
+        "genre": "Mystery",
+        "is_available": false
+    },
+    {
+        "title": "The Silver Ribbon",
+        "author": "Madeline Cooper",
+        "genre": "Romance",
+        "is_available": true
+    },
+    {
+        "title": "The Perfect Stranger",
+        "author": "Nina Holmes",
+        "genre": "Thriller",
+        "is_available": true
+    },
+    {
+        "title": "The Dark Room",
+        "author": "Nina Holmes",
+        "genre": "Mystery",
+        "is_available": false
+    },
+    {
+        "title": "Crimson Tide",
+        "author": "Eva Jensen",
+        "genre": "Fantasy",
+        "is_available": true
+    },
+    {
+        "title": "Frostbound",
+        "author": "Eva Jensen",
+        "genre": "Fantasy",
+        "is_available": true
+    },
+    {
+        "title": "Virtual Shadows",
+        "author": "Connor Blake",
+        "genre": "Cyberpunk",
+        "is_available": true
+    },
+    {
+        "title": "Neural Dawn",
+        "author": "Connor Blake",
+        "genre": "Cyberpunk",
+        "is_available": false
+    },
+    {
+        "title": "System Reboot",
+        "author": "Connor Blake",
+        "genre": "Science Fiction",
+        "is_available": true
+    },
+    {
+        "title": "Garden of Whispers",
+        "author": "Amelia Frost",
+        "genre": "Romance",
+        "is_available": true
+    },
+    {
+        "title": "The Secret Bloom",
+        "author": "Amelia Frost",
+        "genre": "Romance",
+        "is_available": false
+    },
+    {
+        "title": "Legacy of Fire",
+        "author": "Henry Cole",
+        "genre": "Fantasy",
+        "is_available": true
+    },
+    {
+        "title": "The Flame Reborn",
+        "author": "Henry Cole",
+        "genre": "Fantasy",
+        "is_available": false
+    },
+    {
+        "title": "City of Sparks",
+        "author": "Ryan Carter",
+        "genre": "Science Fiction",
+        "is_available": true
+    },
+    {
+        "title": "Nebula Divide",
+        "author": "Ryan Carter",
+        "genre": "Science Fiction",
+        "is_available": false
+    },
+    {
+        "title": "Silent Horizons",
+        "author": "Rachel Pierce",
+        "genre": "Drama",
+        "is_available": true
+    },
+    {
+        "title": "The Glass Wall",
+        "author": "Rachel Pierce",
+        "genre": "Drama",
+        "is_available": false
+    },
+    {
+        "title": "Steel Skies",
+        "author": "Nathan Price",
+        "genre": "Cyberpunk",
+        "is_available": true
+    },
+    {
+        "title": "City Protocol",
+        "author": "Nathan Price",
+        "genre": "Cyberpunk",
+        "is_available": true
+    },
+    {
+        "title": "Songs of Eternity",
+        "author": "Diana Rivers",
+        "genre": "Fantasy",
+        "is_available": false
+    },
+    {
+        "title": "The Sunkeeper\u0432\u0402\u2122s Oath",
+        "author": "Diana Rivers",
+        "genre": "Fantasy",
+        "is_available": true
+    },
+    {
+        "title": "Shattered Reflections",
+        "author": "Tom Ellis",
+        "genre": "Mystery",
+        "is_available": true
+    },
+    {
+        "title": "The Hidden Window",
+        "author": "Tom Ellis",
+        "genre": "Mystery",
+        "is_available": false
+    },
+    {
+        "title": "Orbit of Chaos",
+        "author": "Lara Kim",
+        "genre": "Science Fiction",
+        "is_available": true
+    },
+    {
+        "title": "Binary Stars",
+        "author": "Lara Kim",
+        "genre": "Science Fiction",
+        "is_available": false
+    },
+    {
+        "title": "The Frozen Empire",
+        "author": "Patrick Lowe",
+        "genre": "Historical Fiction",
+        "is_available": true
+    },
+    {
+        "title": "Winter\u0432\u0402\u2122s Throne",
+        "author": "Patrick Lowe",
+        "genre": "Historical Fiction",
+        "is_available": false
+    },
+    {
+        "title": "Crown of Shadows",
+        "author": "Benjamin Clark",
+        "genre": "Fantasy",
+        "is_available": true
+    },
+    {
+        "title": "Veil of Storms",
+        "author": "Benjamin Clark",
+        "genre": "Fantasy",
+        "is_available": false
+    },
+    {
+        "title": "The Creative Mind",
+        "author": "Rachel Evans",
+        "genre": "Non-fiction",
+        "is_available": true
+    },
+    {
+        "title": "Patterns of Thought",
+        "author": "Rachel Evans",
+        "genre": "Non-fiction",
+        "is_available": false
+    },
+    {
+        "title": "Labyrinth of Lies",
+        "author": "Noah Grant",
+        "genre": "Mystery",
+        "is_available": false
+    },
+    {
+        "title": "The Vanished Truth",
+        "author": "Noah Grant",
+        "genre": "Mystery",
+        "is_available": true
+    },
+    {
+        "title": "Moonlight Serenade",
+        "author": "Olivia Price",
+        "genre": "Romance",
+        "is_available": true
+    },
+    {
+        "title": "When We Were Stars",
+        "author": "Olivia Price",
+        "genre": "Romance",
+        "is_available": false
+    },
+    {
+        "title": "Ashes of Time",
+        "author": "William Brooks",
+        "genre": "Historical Fiction",
+        "is_available": false
+    },
+    {
+        "title": "The Lost Dynasty",
+        "author": "William Brooks",
+        "genre": "Historical Fiction",
+        "is_available": true
+    },
+    {
+        "title": "Stormwatch",
+        "author": "Zoe Richards",
+        "genre": "Adventure",
+        "is_available": true
+    },
+    {
+        "title": "Sands of Fate",
+        "author": "Zoe Richards",
+        "genre": "Adventure",
+        "is_available": true
+    },
+    {
+        "title": "Echoes in the Void",
+        "author": "Peter Lang",
+        "genre": "Science Fiction",
+        "is_available": true
+    },
+    {
+        "title": "Solar Descent",
+        "author": "Peter Lang",
+        "genre": "Science Fiction",
+        "is_available": false
+    },
+    {
+        "title": "The Rational Mind",
+        "author": "Victor Hayes",
+        "genre": "Non-fiction",
+        "is_available": false
+    },
+    {
+        "title": "Thinking Forward",
+        "author": "Victor Hayes",
+        "genre": "Non-fiction",
+        "is_available": true
+    },
+    {
+        "title": "Edge of Fear",
+        "author": "Liam Ford",
+        "genre": "Thriller",
+        "is_available": false
+    },
+    {
+        "title": "Cold Pursuit",
+        "author": "Liam Ford",
+        "genre": "Thriller",
+        "is_available": true
+    },
+    {
+        "title": "Eyes of the Storm",
+        "author": "Victoria Adams",
+        "genre": "Thriller",
+        "is_available": true
+    },
+    {
+        "title": "Lightning\u0432\u0402\u2122s Edge",
+        "author": "Victoria Adams",
+        "genre": "Adventure",
+        "is_available": false
+    }
+]

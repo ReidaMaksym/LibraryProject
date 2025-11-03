@@ -1,0 +1,17 @@
+[
+    {
+        "first_name": "Maksym",
+        "last_name": "Reida",
+        "books": [
+            {
+                "title": "The Rational Mind",
+                "date": "2025-11-03"
+            }
+        ]
+    },
+    {
+        "first_name": "Test",
+        "last_name": "2",
+        "books": []
+    }
+]
