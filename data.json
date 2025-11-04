@@ -447,7 +447,7 @@
         "title": "The Rational Mind",
         "author": "Victor Hayes",
         "genre": "Non-fiction",
-        "is_available": false
+        "is_available": true
     },
     {
         "title": "Thinking Forward",

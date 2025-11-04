@@ -2,7 +2,7 @@
 
 class Book:
 
-    def __init__(self, title: str, author: str, genre: str, is_available: str):
+    def __init__(self, title: str, author: str, genre: str, is_available: bool):
         self.title = title
         self.author = author
         self.genre = genre

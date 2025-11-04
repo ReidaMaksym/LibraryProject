@@ -163,13 +163,34 @@ class Library:
             json.dump(books_database, file, indent=4)
 
 
-    def receive_book_back(self, book_title: str):
+    def receive_book_back(self, book_title: str, first_name: str, last_name: str):
         book = self.get_book_by_name(book_title)
+        member = self.get_member_by_first_and_last_name(first_name, last_name)
+        members_database = self.load_members()
+        books_database = self.load_books()
 
         if book and book.is_available == False:
-            book.receive_book()
+            if member:
+                book.receive_book()
+                for member_item in members_database:
+                    if member_item.get('first_name') == first_name and member_item.get("last_name") == last_name:
+                        print(member_item.get('books'))
+                        member_item['books'] = [book for book in member_item['books'] if book['title'] != book_title]
+                        print(member_item.get('books'))
+                        break
+
+                for book_item in books_database:
+                    if book_item.get('title') == book.title and book_item.get('author') == book.author:
+                        book_item['is_available'] = True
+                        break
         else:
             print(f"The book '{book_title}' is not found in the library")
+
+        with open("members.json", "w") as file:
+            json.dump(members_database, file, indent=4)
+
+        with open("data.json", "w") as file:
+            json.dump(books_database, file, indent=4)
 
 
     #Member methods ________________________________________
@@ -233,4 +254,6 @@ library = Library("Test")
 
 # print(library.get_member_by_first_and_last_name("Maksym", "Reida"))
 # library.give_book("The Rational Mind", "Maksym", "Reida")
-library.get_member_by_first_and_last_name("Maksym", "Reida")
+# library.get_member_by_first_and_last_name("Maksym", "Reida")
+
+library.receive_book_back("The Rational Mind", "Maksym", "Reida")
