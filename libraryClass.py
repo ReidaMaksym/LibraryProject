@@ -37,31 +37,19 @@ class Library:
         return books
 
 
-    def add_book(self, title: str, author: str, genre: str, is_available: bool):
+    def add_book(self, title: str, author: str, genre: str, is_available: bool) -> Book:
         new_book = Book(title, author, genre, is_available)
-
         self.books.append(new_book)
-
-        books_database = self.load_books()
-
-        books_database.append({
-            "title": new_book.title,
-            "author": new_book.author,
-            "genre": new_book.genre,
-            "is_available": new_book.is_available
-        })
-
-        with open("data.json", "w") as file:
-            json.dump(books_database, file, indent=4)
+        return new_book
 
 
     def get_all_books(self) -> list[Book]:
         return self.books
 
 
-    def show_all_books(self) -> None:
-        for book in self.books:
-            print(book)
+    # def show_all_books(self) -> None:
+    #     for book in self.books:
+    #         print(book)
 
 
     def get_genres(self) -> list[str]:
@@ -129,65 +117,49 @@ class Library:
 
         book = self.get_book_by_name(book_title)
         member = self.get_member_by_first_and_last_name(first_name, last_name)
-        member_database = self.load_members()
-        books_database = self.load_books()
 
         if book and book.is_available:
             if member:
                 book.borrow_book()
-                for user in member_database:
-                    print(user)
-                    if user.get('first_name') == member.get('first_name') and user.get('last_name') == member.get('last_name'):
-                        print("The user is found")
-                        current_date = date.today()
-                        user.get('books').append({
-                            "title": book.title,
-                            "date": current_date.isoformat()
-                        })
-                        break
-                for book_item in books_database:
-                    if book_item.get('title') == book.title and book_item.get('author') == book.author:
-                        book_item['is_available'] = False
-                        break
+                current_date = date.today()
+                member.borrowed_books.append({
+                    "title": book.title,
+                    "date": current_date.isoformat()
+                })
             else:
                 print(f"The member {first_name} {last_name} is not found")
         else:
             print(f"The book with title {book_title} is not found in the library")
 
-        print(member_database)
-
-        with open("members.json", "w") as file:
-            json.dump(member_database, file, indent=4)
-
-        with open("data.json", "w") as file:
-            json.dump(books_database, file, indent=4)
-
 
     def receive_book_back(self, book_title: str, first_name: str, last_name: str):
         book = self.get_book_by_name(book_title)
         member = self.get_member_by_first_and_last_name(first_name, last_name)
-        members_database = self.load_members()
-        books_database = self.load_books()
 
         if book and book.is_available == False:
             if member:
-                book.receive_book()
-                for member_item in members_database:
-                    if member_item.get('first_name') == first_name and member_item.get("last_name") == last_name:
-                        print(member_item.get('books'))
-                        member_item['books'] = [book for book in member_item['books'] if book['title'] != book_title]
-                        print(member_item.get('books'))
+                for member_book in member.borrowed_books:
+                    if member_book.get('title') == book_title:
+                        member.borrowed_books.remove(member_book)
+                        book.receive_book()
                         break
-
-                for book_item in books_database:
-                    if book_item.get('title') == book.title and book_item.get('author') == book.author:
-                        book_item['is_available'] = True
-                        break
+            else:
+                print(f"The user {first_name} {last_name} is not found")
         else:
             print(f"The book '{book_title}' is not found in the library")
 
-        with open("members.json", "w") as file:
-            json.dump(members_database, file, indent=4)
+
+    def save_books_to_file(self):
+
+        books_database = []
+
+        for book in self.books:
+            books_database.append({
+                "title": book.title,
+                "author": book.author,
+                "genre": book.genre,
+                "is_available": book.is_available
+            })
 
         with open("data.json", "w") as file:
             json.dump(books_database, file, indent=4)
@@ -215,32 +187,32 @@ class Library:
         return users
 
 
-    def add_member(self, first_name: str, last_name: str):
+    def add_member(self, first_name: str, last_name: str) -> Member:
         new_member = Member(first_name, last_name)
-
         self.members.append(new_member)
+        return new_member
 
-        members_database = self.load_members()
 
-        members_database.append({
-            "first_name": first_name,
-            "last_name": last_name,
-            "books": []
-        })
+    def get_member_by_first_and_last_name(self, first_name: str, last_name: str) -> Member | None:
+        for member in self.members:
+            if member.first_name == first_name and member.last_name == last_name:
+                return member
+
+        return None
+
+    def save_members_to_file(self):
+        members_database = []
+
+        for member in self.members:
+            members_database.append({
+                "first_name": member.first_name,
+                "last_name": member.last_name,
+                "books": member.borrowed_books
+            })
 
         with open("members.json", "w") as file:
             json.dump(members_database, file, indent=4)
 
-
-    def get_member_by_first_and_last_name(self, first_name: str, last_name: str) -> dict | None:
-        members_database = self.load_members()
-
-        for member in members_database:
-            if member.get('first_name') == first_name and member.get('last_name') == last_name:
-                print(member)
-                return member
-
-        return None
 
 
 library = Library("Test")
@@ -256,4 +228,10 @@ library = Library("Test")
 # library.give_book("The Rational Mind", "Maksym", "Reida")
 # library.get_member_by_first_and_last_name("Maksym", "Reida")
 
-library.receive_book_back("The Rational Mind", "Maksym", "Reida")
+# library.receive_book_back("The Rational Mind", "Maksym", "Reida")
+
+# print(library.get_member_by_first_and_last_name("Maksym", "Reida"))
+
+library.give_book("Sands of Fate", "Maksym", "Reida")
+library.give_book("Echoes in the Void", "Maksym", "Reida")
+library.receive_book_back("Echoes in the Void", "Maksym", "Reida")
