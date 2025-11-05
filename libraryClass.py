@@ -47,11 +47,6 @@ class Library:
         return self.books
 
 
-    # def show_all_books(self) -> None:
-    #     for book in self.books:
-    #         print(book)
-
-
     def get_genres(self) -> list[str]:
         all_genres = []
 
@@ -92,7 +87,6 @@ class Library:
     def get_books_by_author(self, author: str) -> list[Book] | None:
 
         authors = self.get_authors()
-
         books = []
 
         if author in authors:
@@ -213,25 +207,3 @@ class Library:
         with open("members.json", "w") as file:
             json.dump(members_database, file, indent=4)
 
-
-
-library = Library("Test")
-# print(library.get_book_by_name("The Rational Mind"))
-#
-# print(library.members)
-# print(library.load_members())
-# library.add_book("Test title", "Test author", "Test genre", True)
-# library.add_member("Test", "2")
-
-
-# print(library.get_member_by_first_and_last_name("Maksym", "Reida"))
-# library.give_book("The Rational Mind", "Maksym", "Reida")
-# library.get_member_by_first_and_last_name("Maksym", "Reida")
-
-# library.receive_book_back("The Rational Mind", "Maksym", "Reida")
-
-# print(library.get_member_by_first_and_last_name("Maksym", "Reida"))
-
-library.give_book("Sands of Fate", "Maksym", "Reida")
-library.give_book("Echoes in the Void", "Maksym", "Reida")
-library.receive_book_back("Echoes in the Void", "Maksym", "Reida")

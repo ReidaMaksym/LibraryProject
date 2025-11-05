@@ -465,18 +465,24 @@
         "title": "Cold Pursuit",
         "author": "Liam Ford",
         "genre": "Thriller",
-        "is_available": true
+        "is_available": false
     },
     {
         "title": "Eyes of the Storm",
         "author": "Victoria Adams",
         "genre": "Thriller",
-        "is_available": true
+        "is_available": false
     },
     {
         "title": "Lightning\u0432\u0402\u2122s Edge",
         "author": "Victoria Adams",
         "genre": "Adventure",
         "is_available": false
+    },
+    {
+        "title": "Test title",
+        "author": "Test author",
+        "genre": "Test genre",
+        "is_available": true
     }
 ]

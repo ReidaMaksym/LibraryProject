@@ -2,7 +2,12 @@
     {
         "first_name": "Maksym",
         "last_name": "Reida",
-        "books": []
+        "books": [
+            {
+                "title": "Eyes of the Storm",
+                "date": "2025-11-05"
+            }
+        ]
     },
     {
         "first_name": "Test",
