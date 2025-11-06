@@ -171,8 +171,10 @@ class Library:
                     for user in users:
                         first_name = user.get('first_name')
                         last_name = user.get('last_name')
+                        new_member = Member(first_name, last_name)
+                        new_member.borrowed_books = user.get('books')
 
-                        self.members.append(Member(first_name, last_name))
+                        self.members.append(new_member)
         except FileNotFoundError:
             print("members.json not found. Starting with an empty library.")
         except json.JSONDecodeError:

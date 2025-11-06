@@ -3,7 +3,7 @@
         "title": "The Silent Forest",
         "author": "Clara Mitchell",
         "genre": "Mystery",
-        "is_available": true
+        "is_available": false
     },
     {
         "title": "Whispers in the Fog",
@@ -483,6 +483,6 @@
         "title": "Test title",
         "author": "Test author",
         "genre": "Test genre",
-        "is_available": true
+        "is_available": false
     }
 ]

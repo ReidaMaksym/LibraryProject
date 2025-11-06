@@ -4,8 +4,12 @@
         "last_name": "Reida",
         "books": [
             {
-                "title": "Eyes of the Storm",
-                "date": "2025-11-05"
+                "title": "The Silent Forest",
+                "date": "2025-11-06"
+            },
+            {
+                "title": "Whispers in the Fog",
+                "date": "2025-11-06"
             }
         ]
     },
