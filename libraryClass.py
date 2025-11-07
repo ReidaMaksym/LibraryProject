@@ -120,6 +120,7 @@ class Library:
                     "title": book.title,
                     "date": current_date.isoformat()
                 })
+                print(f"The book: '{book_title}' is successfully borrowed")
             else:
                 print(f"The member {first_name} {last_name} is not found")
         else:
@@ -127,8 +128,10 @@ class Library:
 
 
     def receive_book_back(self, book_title: str, first_name: str, last_name: str):
+
         book = self.get_book_by_name(book_title)
         member = self.get_member_by_first_and_last_name(first_name, last_name)
+        book_is_found = False
 
         if book and book.is_available == False:
             if member:
@@ -136,7 +139,11 @@ class Library:
                     if member_book.get('title') == book_title:
                         member.borrowed_books.remove(member_book)
                         book.receive_book()
+                        book_is_found = True
+                        print(f"The book: '{book_title}' is successfully returned")
                         break
+                if not book_is_found:
+                    print(f"The user don't the book: '{book_title}' in their list of borrowed books")
             else:
                 print(f"The user {first_name} {last_name} is not found")
         else:
@@ -195,6 +202,21 @@ class Library:
                 return member
 
         return None
+
+
+    def get_members_list(self) -> list[str] | list:
+
+        members = []
+        counter = 1
+
+        for member in self.members:
+            formatted_member = f"{counter}: {member.first_name} {member.last_name}"
+            members.append(formatted_member)
+            counter += 1
+
+
+        return members
+
 
     def save_members_to_file(self):
         members_database = []

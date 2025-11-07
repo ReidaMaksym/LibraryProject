@@ -8,14 +8,19 @@
                 "date": "2025-11-06"
             },
             {
-                "title": "Whispers in the Fog",
-                "date": "2025-11-06"
+                "title": "The Last Kingdom",
+                "date": "2025-11-07"
             }
         ]
     },
     {
         "first_name": "Test",
         "last_name": "2",
+        "books": []
+    },
+    {
+        "first_name": "New",
+        "last_name": "User",
         "books": []
     }
 ]

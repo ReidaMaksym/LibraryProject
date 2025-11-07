@@ -14,7 +14,10 @@ while True:
                        "5: Get the list of authors: \n"
                         "6: Get the list of books by author: \n"
                         "7: Get the book by name: \n"
-                        "8: To borrow book: \n")
+                        "8: To borrow book: \n"
+                        "9: To get the book back: \n"
+                        "10: Add a new member: \n"
+                        "11: Get the list of all members: \n")
 
     if user_choice == '1':
 
@@ -84,13 +87,39 @@ while True:
         add_space()
 
     elif user_choice == '8':
-        # Нужно проверить почему не добавляется, а перезаписывается
+
         book_title = input("Enter the book's title: ")
         first_name = input("Enter the First name: ")
         last_name = input("Enter the Last name: ")
 
         library.give_book(book_title, first_name, last_name)
+        add_space()
 
+    elif user_choice == '9':
+
+        book_title = input("Enter the book's title: ")
+        first_name = input("Enter the First name: ")
+        last_name = input("Enter the Last name: ")
+
+        library.receive_book_back(book_title, first_name, last_name)
+        add_space()
+
+    elif user_choice == '10':
+
+        first_name = input("Enter the first name: ")
+        last_name = input("Enter the last name: ")
+
+        new_member = library.add_member(first_name, last_name)
+        if new_member:
+            print("A new member is successfully created")
+        add_space()
+
+    elif user_choice == '11':
+
+        members = library.get_members_list()
+
+        for member in members:
+            print(member)
         add_space()
 
     elif user_choice == "0":

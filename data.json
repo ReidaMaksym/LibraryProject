@@ -9,7 +9,7 @@
         "title": "Whispers in the Fog",
         "author": "Clara Mitchell",
         "genre": "Mystery",
-        "is_available": false
+        "is_available": true
     },
     {
         "title": "The Crimson Key",
@@ -51,7 +51,7 @@
         "title": "The Last Kingdom",
         "author": "Arthur Benson",
         "genre": "Historical Fiction",
-        "is_available": true
+        "is_available": false
     },
     {
         "title": "Sword of Destiny",
